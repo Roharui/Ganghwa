@@ -14,7 +14,9 @@ add_executable(
   ${MY_SRCS_MINUS_MAIN}
 )
 
-target_include_directories(${MY_TEST_NAME} PUBLIC
+target_include_directories(
+  ${MY_TEST_NAME} 
+  PUBLIC
   ${MY_INCLUDES}
   ${MY_TEST_INCLUDES}
   ${MY_MSYS2_INCLUDES}
