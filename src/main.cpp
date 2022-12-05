@@ -1,7 +1,19 @@
 #include <iostream>
+#include "driver.hpp"
 
-int main(int, char **)
+using namespace ganghwa;
+using namespace std;
+
+int main(void)
 {
-  std::cout << "Hello World!" << std::endl;
+  try
+  {
+    Driver().run();
+  }
+  catch (exception &e)
+  {
+    cout << typeid(e).name() << endl;
+    cerr << e.what() << endl;
+  }
   return 0;
 }
