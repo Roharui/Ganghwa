@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
 
 # 프로젝트 이름을 적어주세요
-project(Cmake-boilerPlate VERSION 0.1.0)
+project(ganghwa VERSION 0.1.0)
 
 SET(CMAKE_CXX_STANDARD 20)
 
@@ -17,7 +17,7 @@ file(GLOB MY_SRCS ${PROJECT_SOURCE_DIR}/src/**/*.cpp)
 set(MY_SRCS ${MY_SRCS} ${PROJECT_SOURCE_DIR}/src/main.cpp)
 set(MY_INCLUDES ${PROJECT_SOURCE_DIR}/include)
 set(MY_MSYS2_INCLUDES C:/tools/msys64/mingw64/include)
-set(MY_LIBS) # 해당 변수에 필요한 라이브러리를 적어주세요
+set(MY_LIBS raylib gdi32 winmm) # 해당 변수에 필요한 라이브러리를 적어주세요
 
 add_subdirectory(src)
 add_subdirectory(tests)
