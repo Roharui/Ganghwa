@@ -15,6 +15,16 @@
       "MIMode": "gdb",
       "miDebuggerPath": "C:/tools/msys64/mingw64/bin/gdb.exe",
       "preLaunchTask": "CMake: build"
+    },
+    {
+      "name": "Test Program",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceRoot}\\build\\tests\\${workspaceFolderBasename}-test.exe",
+      "args": [],
+      "cwd": ".",
+      "environment": [],
+      "preLaunchTask": "CMake: build"
     }
   ]
 }
