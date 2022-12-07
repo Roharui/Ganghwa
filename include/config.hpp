@@ -4,3 +4,5 @@
 #define WINDOW_HEIGH 450
 
 #define WINDOW_TITLE "ganghwa - the enforce game : v0.1.0"
+
+#define MONEY 1000

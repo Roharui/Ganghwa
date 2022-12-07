@@ -1,21 +1,21 @@
 
-#include "object/object.hpp"
+#include "object/button.hpp"
 
 namespace ganghwa
 {
-  Object::Object(Vector2 loc, Vector2 size, Color color)
+  Button::Button(Vector2 loc, Vector2 size, Color color)
   {
     this->loc = loc;
     this->size = size;
     this->color = color;
   }
 
-  void Object::draw()
+  void Button::draw()
   {
     DrawRectangleV(this->loc, this->size, this->color);
   }
 
-  bool Object::checkClick(Vector2 vec)
+  bool Button::checkClick(Vector2 vec)
   {
     int x = vec.x;
     int y = vec.y;
@@ -29,13 +29,14 @@ namespace ganghwa
     return (sx <= x && ex >= x) && ((sy <= y && ey >= y));
   }
 
-  void Object::doClick()
+  void Button::doClick()
   {
-    this->fn();
+    if (this->clickFn)
+      this->clickFn();
   }
 
-  void Object::setFn(void (*fn)())
+  void Button::setFn(void (*clickFn)())
   {
-    this->fn = fn;
+    this->clickFn = clickFn;
   }
 }

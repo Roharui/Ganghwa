@@ -11,10 +11,21 @@ namespace ganghwa
     this->pt = ENFORCE;
 
     // enforce Page
-    Object obj({100, 100}, {100, 100}, BLUE);
-    obj.setFn([]()
-              { std::cout << "Hello World!\n"; });
-    this->pages[ENFORCE] = Page({obj});
+    Page enforce;
+
+    Button btn({100, 100}, {100, 100}, BLUE);
+    btn.setFn([]()
+              { MoneyManager &m = MoneyManager::getInstance();
+                m.setMoney(m.getMoney() - 100); });
+    enforce.setBtns({btn});
+
+    Text text({100, 100}, 10, BLACK);
+    text.setFn([](Text *t)
+               { MoneyManager &m = MoneyManager::getInstance();
+                t->setText("Money: " + std::to_string(m.getMoney())); });
+    enforce.setTxts({text});
+
+    this->pages[ENFORCE] = enforce;
   }
 
   // public

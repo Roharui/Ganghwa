@@ -3,7 +3,7 @@
 
 namespace ganghwa
 {
-  Driver::Driver()
+  Driver::Driver() : pm(PageManager::getInstance())
   {
     InitWindow(WINDOW_WIDTH, WINDOW_HEIGH, WINDOW_TITLE);
 

@@ -2,7 +2,8 @@
 
 #include <vector>
 
-#include "object/object.hpp"
+#include "object/button.hpp"
+#include "object/text.hpp"
 
 using std::vector;
 
@@ -11,10 +12,15 @@ namespace ganghwa
   class Page
   {
   private:
-    vector<Object> vObj;
+    vector<Button> vBtn;
+    vector<Text> vTxt;
 
   public:
-    Page(const vector<Object> vObj);
+    Page() {}
+
+    void setBtns(vector<Button> vBtn);
+    void setTxts(vector<Text> vTxt);
+
     void draw();
     void doClick(Vector2 &vec);
   };

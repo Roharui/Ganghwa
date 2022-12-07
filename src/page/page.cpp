@@ -3,14 +3,23 @@
 
 namespace ganghwa
 {
-  Page::Page(const vector<Object> vObj)
+  void Page::setBtns(vector<Button> vBtn)
   {
-    this->vObj = vObj;
+    this->vBtn = vBtn;
+  }
+
+  void Page::setTxts(vector<Text> vTxt)
+  {
+    this->vTxt = vTxt;
   }
 
   void Page::draw()
   {
-    for (Object &i : this->vObj)
+    for (Button &i : this->vBtn)
+    {
+      i.draw();
+    }
+    for (Text &i : this->vTxt)
     {
       i.draw();
     }
@@ -18,7 +27,7 @@ namespace ganghwa
 
   void Page::doClick(Vector2 &vec)
   {
-    for (Object &i : this->vObj)
+    for (Button &i : this->vBtn)
     {
       if (i.checkClick(vec))
       {

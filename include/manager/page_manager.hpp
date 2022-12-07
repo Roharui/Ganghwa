@@ -1,6 +1,10 @@
 #pragma once
 
 #include <map>
+#include <string>
+
+#include "manager/manager.hpp"
+#include "manager/money_manager.hpp"
 
 #include "page/page.hpp"
 
@@ -17,16 +21,24 @@ namespace ganghwa
     ENFORCE,
   };
 
-  class PageManager
+  class PageManager : public Manager
   {
   private:
     PageType pt;
     map<PageType, Page> pages;
     void load_pages();
 
-  public:
+  protected:
     PageManager();
+
+  public:
     Page &curPage();
     void setPage(PageType pt);
+
+    static PageManager &getInstance()
+    {
+      static PageManager p;
+      return p;
+    }
   };
 }
