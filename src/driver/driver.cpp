@@ -17,11 +17,8 @@ namespace ganghwa
     {
       // Update
       //----------------------------------------------------------------------------------
-      Page p = pm.curPage();
-      MouseInfo mi = getMouseInfo();
-
-      if (mi.click)
-        p.doClick(mi.vec);
+      Page &p = pm.curPage();
+      p.calc();
       //----------------------------------------------------------------------------------
 
       // Draw

@@ -7,9 +7,7 @@
 #include "manager/money_manager.hpp"
 
 #include "page/page.hpp"
-
-// tmp
-#include <iostream>
+#include "page/enforce_page.hpp"
 
 using std::map;
 
@@ -25,7 +23,9 @@ namespace ganghwa
   {
   private:
     PageType pt;
-    map<PageType, Page> pages;
+
+    EnforcePage ep;
+
     void load_pages();
 
   protected:

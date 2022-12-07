@@ -12,14 +12,7 @@ namespace ganghwa
 
   void Text::draw()
   {
-    if (this->loadFn)
-      this->loadFn(this);
     DrawText(this->text.c_str(), this->loc.x, this->loc.y, this->size, this->color);
-  }
-
-  void Text::setFn(void (*loadFn)(Text *t))
-  {
-    this->loadFn = loadFn;
   }
 
   void Text::setText(string text)

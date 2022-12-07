@@ -1,5 +1,7 @@
 #pragma once
 
+#include <raylib.h>
+
 namespace ganghwa
 {
   class Object

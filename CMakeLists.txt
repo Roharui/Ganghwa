@@ -18,7 +18,7 @@ file(GLOB MY_SRCS ${PROJECT_SOURCE_DIR}/src/**/*.cpp)
 set(MY_SRCS ${MY_SRCS} ${PROJECT_SOURCE_DIR}/src/main.cpp)
 set(MY_INCLUDES ${PROJECT_SOURCE_DIR}/include)
 set(MY_MSYS2_INCLUDES C:/tools/msys64/mingw64/include)
-set(MY_LIBS raylib gdi32 winmm)
+set(MY_LIBS raylib gdi32 winmm fmt)
 
 add_subdirectory(src)
 add_subdirectory(tests)

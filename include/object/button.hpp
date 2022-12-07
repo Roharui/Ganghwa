@@ -13,15 +13,11 @@ namespace ganghwa
     Vector2 loc;
     Color color;
 
-    void (*clickFn)() = nullptr;
-
   public:
+    Button(){};
     Button(Vector2 loc, Vector2 size, Color color);
-    bool checkClick(Vector2 vec);
+    bool checkClick();
 
-    void setFn(void (*clickFn)());
-    void doClick();
-
-    void draw();
+    void draw() override;
   };
 }

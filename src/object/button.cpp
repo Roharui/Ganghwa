@@ -15,8 +15,10 @@ namespace ganghwa
     DrawRectangleV(this->loc, this->size, this->color);
   }
 
-  bool Button::checkClick(Vector2 vec)
+  bool Button::checkClick()
   {
+    Vector2 vec = GetMousePosition();
+
     int x = vec.x;
     int y = vec.y;
 
@@ -26,17 +28,6 @@ namespace ganghwa
     int ex = this->loc.x + this->size.x;
     int ey = this->loc.y + this->size.y;
 
-    return (sx <= x && ex >= x) && ((sy <= y && ey >= y));
-  }
-
-  void Button::doClick()
-  {
-    if (this->clickFn)
-      this->clickFn();
-  }
-
-  void Button::setFn(void (*clickFn)())
-  {
-    this->clickFn = clickFn;
+    return IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && (sx <= x && ex >= x) && (sy <= y && ey >= y);
   }
 }

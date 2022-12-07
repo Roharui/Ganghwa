@@ -17,14 +17,12 @@ namespace ganghwa
     string text;
     Color color;
 
-    void (*loadFn)(Text *t) = nullptr;
-
   public:
+    Text() {}
     Text(Vector2 loc, int size, Color color);
 
-    void setFn(void (*loadFn)(Text *t));
     void setText(string text);
 
-    void draw();
+    void draw() override;
   };
 }
