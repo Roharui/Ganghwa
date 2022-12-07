@@ -6,12 +6,20 @@
       "label": "CMake: build",
       "command": "build",
       "targets": ["all"],
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "CMake template build task"
+    },
+    {
+      "type": "cmake",
+      "label": "CMake: clean",
+      "command": "clean",
+      "problemMatcher": [],
+      "detail": "CMake template clean task",
       "group": {
         "kind": "build",
         "isDefault": true
-      },
-      "problemMatcher": [],
-      "detail": "CMake template build task"
+      }
     }
   ]
 }
