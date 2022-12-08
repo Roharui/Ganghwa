@@ -15,6 +15,8 @@ namespace ganghwa
     {
     case ENFORCE:
       return this->ep;
+    default:
+      return this->ep;
     }
   }
 

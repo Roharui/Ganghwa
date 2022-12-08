@@ -23,10 +23,7 @@ namespace ganghwa
   {
   private:
     PageType pt;
-
     EnforcePage ep;
-
-    void load_pages();
 
   protected:
     PageManager();

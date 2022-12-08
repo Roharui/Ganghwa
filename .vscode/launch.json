@@ -10,7 +10,7 @@
       "request": "launch",
       "program": "${workspaceRoot}\\build\\src\\${workspaceFolderBasename}.exe",
       "args": [],
-      "cwd": ".",
+      "cwd": "${workspaceRoot}",
       "environment": [],
       "MIMode": "gdb",
       "miDebuggerPath": "C:/tools/msys64/mingw64/bin/gdb.exe",

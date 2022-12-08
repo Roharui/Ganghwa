@@ -3,6 +3,8 @@
 
 namespace ganghwa
 {
+  // Font Text::font = LoadFont("./font/NanumBarunGothic.ttf");
+
   Driver::Driver() : pm(PageManager::getInstance())
   {
     InitWindow(WINDOW_WIDTH, WINDOW_HEIGH, WINDOW_TITLE);
@@ -35,6 +37,7 @@ namespace ganghwa
 
   Driver::~Driver()
   {
+    // UnloadFont(Text::font);
     CloseWindow();
   }
 }

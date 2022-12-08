@@ -12,7 +12,8 @@ namespace ganghwa
 
   void Text::draw()
   {
-    DrawText(this->text.c_str(), this->loc.x, this->loc.y, this->size, this->color);
+    FontManager &fm = FontManager::getInstance();
+    DrawTextEx(fm.getFont(), this->text.c_str(), this->loc, this->size, 2, this->color);
   }
 
   void Text::setText(string text)

@@ -5,6 +5,8 @@
 
 #include "object/object.hpp"
 
+#include "manager/font_manager.hpp"
+
 using std::string;
 
 namespace ganghwa
@@ -20,6 +22,8 @@ namespace ganghwa
   public:
     Text() {}
     Text(Vector2 loc, int size, Color color);
+
+    static Font font;
 
     void setText(string text);
 

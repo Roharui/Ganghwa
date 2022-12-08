@@ -74,5 +74,6 @@ _deps
 
 build/
 resources/
+font/
 
 # End of https://www.toptal.com/developers/gitignore/api/cmake,visualstudiocode,c++

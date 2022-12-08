@@ -1,5 +1,9 @@
 #pragma once
 
+#include <string>
+
+using std::string;
+
 namespace ganghwa
 {
   enum ItemType
@@ -10,4 +14,16 @@ namespace ganghwa
     SWORD,
     STAFF,
   };
+
+  string getNameOfItemType(ItemType type);
+
+  enum ItemLevel
+  {
+    COMMON,
+    RARE,
+    EPIC,
+    LEGEND,
+  };
+
+  string getNameOfItemLevel(ItemLevel level);
 }

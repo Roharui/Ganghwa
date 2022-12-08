@@ -13,15 +13,13 @@
 // page section
 #include "manager/page_manager.hpp"
 
-// tmp section
-
 using std::vector;
 namespace ganghwa
 {
   class Driver
   {
   private:
-    PageManager pm;
+    PageManager &pm;
 
   public:
     Driver();

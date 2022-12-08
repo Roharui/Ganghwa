@@ -5,9 +5,12 @@
 #include "page/page.hpp"
 
 #include "manager/money_manager.hpp"
+#include "manager/item_manager.hpp"
 
 #include "object/button.hpp"
 #include "object/text.hpp"
+
+#include "element/item_info.hpp"
 
 namespace ganghwa
 {
@@ -16,8 +19,7 @@ namespace ganghwa
   private:
     Button do_btn;
     Text money_txt;
-
-    MoneyManager &mm;
+    ItemInfo info_ele;
 
   public:
     EnforcePage();
